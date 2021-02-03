@@ -1,0 +1,7 @@
+FROM ubuntu:20.04
+
+apt update
+
+apt install nodejs
+
+apt install npm

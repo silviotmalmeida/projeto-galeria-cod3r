@@ -1,0 +1,24 @@
+version: '3.5'
+
+services:
+
+  #nome do servico
+  galeria:
+
+    #construido a partir de uma imagem customizada em ./image
+    image: galeria
+    
+    #nome do conteiner
+    container_name: galeria
+
+    #pastas compartilhadas
+    volumes:
+      #pasta do codigo fonte da aplicacao
+      - "./app:/usr/src/app"
+
+    #porta a ser exposta
+    ports:
+      - 3003:3003
+  
+    #artifício para manter o container aberto
+    tty: true
