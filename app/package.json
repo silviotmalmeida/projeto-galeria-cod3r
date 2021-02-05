@@ -4,13 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-
     "start": "webpack-dev-server",
     "build": "cross-env NODE_ENV=production webpack"
-  },
-  "scriptsComments": {
-    "start": "roda o projeto em modo desenvolvimento, utilizando dados em memória",
-    "build": "gera a pasta build com os dados para o ambiente de produção"
   },
   "keywords": [],
   "author": "",

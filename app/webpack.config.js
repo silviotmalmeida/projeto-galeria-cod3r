@@ -21,6 +21,7 @@ module.exports = {
     contentBase: "./build",
 
     //porta
+    host:"0.0.0.0",
     port: 3003,
   },
 
@@ -54,9 +55,12 @@ module.exports = {
       { context: "src/", from: "imgs/**/*" },
     ]),
   ],
+  //configurações de módulos
   module: {
+    //configurações de regras
     rules: [
       {
+        //regras para arquivos sass e scss
         test: /\.s?[ac]ss$/,
         use: [
           MiniCssExtractPlugin.loader,
@@ -66,10 +70,12 @@ module.exports = {
         ],
       },
       {
+        //regras para arquivos de imagens
         test: /\.(png|svg|jpg|gif)$/,
         use: ["file-loader"],
       },
       {
+        //regras para fontes
         test: /.(ttf|otf|eot|svg|woff(2)?)$/,
         use: ["file-loader"],
       },

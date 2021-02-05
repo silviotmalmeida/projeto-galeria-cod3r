@@ -1,6 +1,11 @@
+//importando o bootstrap
 @import "~bootstrap/scss/bootstrap";
 
+//sobreescrevendo a variável padrão para o diretório das fontes
 $fa-font-path: "~font-awesome/fonts";
+
+//importando o font-awesome
 @import "~font-awesome/scss/font-awesome";
 
+//importando o arquivo de customizações do projeto (custom.scss)
 @import "custom";
