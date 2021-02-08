@@ -1,3 +1,5 @@
+//arquivo de entrada do webpack
+
 // importando os arquivos SASS
 import "./scss/index.scss";
 

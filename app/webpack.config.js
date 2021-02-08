@@ -1,7 +1,7 @@
 //recebe false se a variável NODE_ENV estiver setada como production
 const modoDev = process.env.NODE_ENV !== "production";
 
-//
+//realizando os imports
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
@@ -12,7 +12,7 @@ module.exports = {
   //definindo o modo a partir da variável modoDev
   mode: modoDev ? "development" : "production",
 
-  //definindo a página inicial do projeto
+  //definindo o arquivo de entrada
   entry: "./src/index.js",
 
   //configurando o servidor de desenvolvimento
@@ -20,8 +20,10 @@ module.exports = {
     //pasta de saída do projeto (não será criada em modo de desenvolvimento)
     contentBase: "./build",
 
+    //host
+    host: "0.0.0.0",
+
     //porta
-    host:"0.0.0.0",
     port: 3003,
   },
 

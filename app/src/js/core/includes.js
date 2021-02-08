@@ -19,7 +19,6 @@ function loadIncludes(parent) {
   $(parent)
     //filtrando os subcomponentes que possuem o atributo wm-include
     .find("[wm-include]")
-
     //percorrendo os sobcomponentes filtrados
     .each(function(i, e) {
       //obtendo a url a partir do valor do atributo wm-include
