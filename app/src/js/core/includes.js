@@ -1,10 +1,15 @@
 //importando o jquery
 import $ from "jquery";
 
+//array de funções a serem chamadas após o carregamento da página
 const loadHtmlSuccessCallbacks = [];
 
 export function onLoadHtmlSuccess(callback) {
+  //função que popula o array de funções a serem chamadas após o carregamento da página
+
+  //se a função ainda não estiver presente no array:
   if (!loadHtmlSuccessCallbacks.includes(callback)) {
+    //inclui a função
     loadHtmlSuccessCallbacks.push(callback);
   }
 }
@@ -33,6 +38,7 @@ function loadIncludes(parent) {
           //remove o attributo wm-include do componente
           $(e).removeAttr("wm-include");
 
+          //chamando as funções a serem carregadas após o carregamento da página
           loadHtmlSuccessCallbacks.forEach((callback) => callback(data));
 
           //usando recursivamente a função loadIncludes para alcançar os componentes filhos
