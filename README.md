@@ -12,3 +12,5 @@ O projeto encontra-se dockerizado para facilitar a implantação. As orientaçõ
 * O sistema estará disponível na URL "localhost:3003".
 
 * Para encerrar a execução utiliza-se o comando "sudo ./stopContainers.sh";
+
+Foram incluídos diversos comentários para facilitar o entendimento do código.
